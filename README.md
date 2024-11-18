@@ -102,8 +102,12 @@ Update-Database
 3.**Inserir Perfis de Usuário
 Após a configuração inicial do banco de dados, insira os perfis básicos executando o seguinte script SQL:
 
-4. O script para inserir os perfis de usuário (Admin e Usuário) já está incluído nos arquivos do projeto e foi versionado no Git. Para rodar esse script diretamente no banco de dados, basta acessar o arquivo na pasta Scripts do projeto e executá-lo no seu SQL Server.
+## Inserir Perfis de Usuário
 
+O script para inserir os perfis de usuário (`OPERADOR` e `ADMINISTRADOR`) já está incluído nos arquivos do projeto e foi versionado no Git. Para rodar esse script diretamente no banco de dados, basta acessar o arquivo na pasta `Scripts` do projeto e executá-lo no seu SQL Server.
+
+**Script SQL para carga de dados na tabela de perfil:**
+```sql
 -- SCRIPT PARA CARGA DE DADOS NA TABELA DE PERFIL
 INSERT INTO TB_PERFIL(ID, NOME)
     VALUES
@@ -112,5 +116,6 @@ INSERT INTO TB_PERFIL(ID, NOME)
 GO
 
 SELECT * FROM TB_PERFIL;
+
 
 
