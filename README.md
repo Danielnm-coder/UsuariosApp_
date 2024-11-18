@@ -97,19 +97,20 @@ Após configurar a string de conexão e definir o projeto correto de inicializa�
 
 Aplique as migrações ao banco de dados:
 
-**Update-Database
+Update-Database
 
 3.**Inserir Perfis de Usuário
 Após a configuração inicial do banco de dados, insira os perfis básicos executando o seguinte script SQL:
 
 4. O script para inserir os perfis de usuário (Admin e Usuário) já está incluído nos arquivos do projeto e foi versionado no Git. Para rodar esse script diretamente no banco de dados, basta acessar o arquivo na pasta Scripts do projeto e executá-lo no seu SQL Server.
 
---SCRIPT PARA CARGA DE DADOS NA TABELA DE PERFIL
+-- SCRIPT PARA CARGA DE DADOS NA TABELA DE PERFIL
 INSERT INTO TB_PERFIL(ID, NOME)
-	VALUES
-		(NEWID(), 'OPERADOR'),
-		(NEWID(), 'ADMINISTRADOR');
+    VALUES
+        (NEWID(), 'OPERADOR'),
+        (NEWID(), 'ADMINISTRADOR');
 GO
 
 SELECT * FROM TB_PERFIL;
+
 
